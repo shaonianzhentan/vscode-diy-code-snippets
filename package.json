@@ -7,7 +7,7 @@
 		"自定义代码",
 		"代码片段"
 	],
-	"publisher": "sxei",
+	"publisher": "shaonianzhentan",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.36.0"
@@ -15,7 +15,7 @@
 	"categories": [
 		"Snippets"
 	],
-	"icon": "https://raw.githubusercontent.com/shaonianzhentan/vscode-diy-code-snippets/master/images/icon.png",
+	"icon": "images/icon.png",
 	"activationEvents": [
 		"onLanguage:vue"
 	],

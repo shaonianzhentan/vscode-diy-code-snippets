@@ -1,65 +1,57 @@
-# diy-code-snippets README
+# 自定义代码片区 README
 
-This is the README for your extension "diy-code-snippets". After writing up a brief description, we recommend including the following sections.
 
-## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## 使用说明
 
-For example if there is an image subfolder under your extension project workspace:
+在项目src里建立一个@type文件夹
 
-\!\[feature X\]\(images/feature-x.png\)
+然后建立一个json文件（例如：this.api.json）
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+this.api.json文件内容
+```
 
-## Requirements
+[
+  {
+    "name": "字段方法名称",
+    "type": "类型【 Module、Method、Field、Class、Function】",
+    "detail": "描述详情",
+    "filterText": "根据输入字符过滤（非必填）",
+    "insertText": "选择方法后插入的文本（非必填）",
+    "hover": "鼠标移上去显示的内容（非必填）"
+  },
+  ...
+]
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+```
 
-## Extension Settings
+当输入this.api的时候，会显示字段方法名称
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+this.api.字段方法名称
 
-For example:
+## 注意
 
-This extension contributes the following settings:
+目前只在.vue文件里有效
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+## 扩展设置
 
-## Known Issues
+暂时还没有设置项
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+例如:
 
-## Release Notes
+此扩展提供以下设置:
 
-Users appreciate release notes as you update your extension.
+* `diy-code-snippets.dir`: 设置读取配置文件夹名
 
-### 1.0.0
+## 已知问题
 
-Initial release of ...
+只有this.api.service里的方法才能鼠标移上去显示提示.
 
-### 1.0.1
+## 发行说明
 
-Fixed issue #.
+### 0.0.1
 
-### 1.1.0
+1.自定义提示信息
 
-Added features X, Y, and Z.
 
 -----------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
