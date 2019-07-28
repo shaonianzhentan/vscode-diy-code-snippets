@@ -6,7 +6,6 @@ function getData(document: any, position: any, flags: string = '') {
     // 获取目录
     let dir = document.fileName.substr(0, document.fileName.indexOf('\\src\\')) + '\\src\\@types';
     if (fs.existsSync(dir)) {
-
       const line = document.lineAt(position);
       const lineText = line.text;
       // 鼠标移动查看
