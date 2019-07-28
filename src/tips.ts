@@ -8,14 +8,13 @@ function getData(document: any, position: any, flags: string = '') {
     if (fs.existsSync(dir)) {
 
       const line = document.lineAt(position);
-      // 只截取到光标位置为止，防止一些特殊情况
-      const lineText = line.text.substring(0, position.character);
-
+      const lineText = line.text;
       // 鼠标移动查看
       if (flags === 'hover' && lineText.includes('api.service.')) {
         let m = lineText.match(/api\.service\.([a-zA-Z_]+)\(/);
         if (m && m.length >= 2) {
           const word = document.getText(document.getWordRangeAtPosition(position));
+          console.log(word);
           if (m[1] === word) {
             let serviceName = `${dir}\\api.service.json`;
             if (fs.existsSync(serviceName)) {
@@ -28,19 +27,17 @@ function getData(document: any, position: any, flags: string = '') {
           }
         }
       } else {
+        // 只截取到光标位置为止，防止一些特殊情况
+        const sublineText = lineText.substring(0, position.character);
         let files = fs.readdirSync(dir);
         files.filter((ele: string) => ele.indexOf('.json') > 0).forEach((name: string) => {
           let reg = new RegExp(name.replace('.json', '.') + '$');
-          if (reg.test(lineText)) {
+          if (reg.test(sublineText)) {
             let result = JSON.parse(fs.readFileSync(`${dir}\\${name}`, 'utf8'));
             resolve(result);
           }
         });
       }
-
-
-
-
     }
   });
 }
