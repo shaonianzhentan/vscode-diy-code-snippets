@@ -14,7 +14,6 @@ function getData(document: any, position: any, flags: string = '') {
         let m = lineText.match(/api\.service\.([a-zA-Z_]+)\(/);
         if (m && m.length >= 2) {
           const word = document.getText(document.getWordRangeAtPosition(position));
-          console.log(word);
           if (m[1] === word) {
             let serviceName = `${dir}\\api.service.json`;
             if (fs.existsSync(serviceName)) {
