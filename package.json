@@ -1,22 +1,27 @@
 {
 	"name": "diy-code-snippets",
 	"displayName": "自定义代码片段",
-	"description": "jiluxinqing",
+	"description": "自定义代码片段",
+	"keywords": [
+		"自定义代码片段",
+		"自定义代码",
+		"代码片段"
+	],
+	"publisher": "sxei",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.36.0"
 	},
 	"categories": [
-		"Other"
+		"Snippets"
 	],
+	"icon": "https://raw.githubusercontent.com/shaonianzhentan/vscode-diy-code-snippets/master/images/icon.png",
 	"activationEvents": [
 		"onLanguage:vue"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			
-		]
+		"commands": []
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -35,5 +40,13 @@
 		"typescript": "^3.3.1",
 		"tslint": "^5.12.1",
 		"vscode-test": "^1.0.2"
-	}
+	},
+	"bugs": {
+		"url": "https://github.com/shaonianzhentan/vscode-diy-code-snippets/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/shaonianzhentan/vscode-diy-code-snippets"
+	},
+	"homepage": "https://github.com/shaonianzhentan/vscode-diy-code-snippets/blob/master/README.md"
 }
