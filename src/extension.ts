@@ -39,9 +39,9 @@ export function activate(context: vscode.ExtensionContext) {
 			let terminal = vscode.window.createTerminal({ name: "自定义代码片段" });
 			terminal.show(true);
 			terminal.sendText(cmdText);
-			setTimeout(() => {
-				terminal.dispose();
-			}, 2000);
+			terminal.sendText('echo 10秒后关闭窗口');
+			terminal.sendText('ping localhost -n 10 > nul');
+			terminal.sendText('exit');
 			vscode.window.showInformationMessage('【自定义代码片段】执行命令成功！');
 		}
 		//console.log(textEditor, edit);
