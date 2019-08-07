@@ -17,11 +17,28 @@
 	],
 	"icon": "images/icon.png",
 	"activationEvents": [
-		"onLanguage:vue"
+		"onLanguage:vue",
+		"onCommand:extension.exec"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": []
+		"configuration": {
+			"type": "object",
+			"title": "自定义代码片段",
+			"properties": {
+				"command": {
+					"type": "string",
+					"default": "",
+					"description": "cmd命令（会在后面传入当前编辑文件的绝对路径）"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extension.exec",
+				"title": "调用自定义程序"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

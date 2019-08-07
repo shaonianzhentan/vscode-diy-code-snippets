@@ -92,7 +92,7 @@ module.exports = function (context: any) {
     try {
       let result: any = await getData(document, position, 'hover');
       if (result) {
-        return new vscode.Hover(result.detail);
+        return new vscode.Hover(result.hover || result.detail);
       }
     } catch{
 
