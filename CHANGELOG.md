@@ -1,9 +1,10 @@
-# Change Log
+# 更新日志
 
-All notable changes to the "diy-code-snippets" extension will be documented in this file.
+## 版本 0.0.2  -  2019-08-08
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+1.修复鼠标移上去无法显示完整提示的问题
+2.加入自定义命令功能，在执行命令时会带上当前编辑的文件路径
 
-## [Unreleased]
+## 版本 0.0.1  -  2019-07-28
 
-- Initial release
+1.自定义提示信息
