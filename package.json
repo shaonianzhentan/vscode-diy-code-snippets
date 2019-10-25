@@ -8,7 +8,7 @@
 		"代码片段"
 	],
 	"publisher": "shaonianzhentan",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.36.0"
 	},
@@ -33,6 +33,14 @@
 				}
 			}
 		},
+		"keybindings": [
+			{
+				"command": "extension.exec",
+				"key": "ctrl+alt+z",
+				"mac": "ctrl+alt+z",
+				"when": "editorTextFocus"
+			}
+		],
 		"commands": [
 			{
 				"command": "extension.exec",

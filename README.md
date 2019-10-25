@@ -4,13 +4,27 @@
 
 ## 使用说明
 
-在项目src里建立一个@type文件夹
+在项目src里建立一个@types文件夹
 
 然后建立一个json文件（例如：this.api.json）
 
 this.api.json文件内容
 ```
+[
+  {
+    "name": "test",
+    "type": "Method",
+    "detail": "描述详情",
+    "filterText": "_test",
+    "insertText": "test().then(()=>{ \n //这里是一个测试方法 \n})",
+    "hover": "鼠标移上去显示的内容（非必填）"
+  },
+  ...
+]
+```
 
+this.api.json文件内容字段介绍
+```
 [
   {
     "name": "字段方法名称",
@@ -22,8 +36,8 @@ this.api.json文件内容
   },
   ...
 ]
-
 ```
+
 
 当输入this.api的时候，会显示字段方法名称
 
@@ -44,6 +58,10 @@ this.api.字段方法名称
 只有this.api.service里的方法才能鼠标移上去显示提示.
 
 ## 发行说明
+
+### 0.0.3
+
+1.修复文字错误
 
 ### 0.0.2
 
