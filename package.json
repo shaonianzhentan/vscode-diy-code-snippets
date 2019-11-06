@@ -36,8 +36,8 @@
 		"keybindings": [
 			{
 				"command": "extension.exec",
-				"key": "ctrl+alt+z",
-				"mac": "ctrl+alt+z",
+				"key": "ctrl+alt+shift+z",
+				"mac": "ctrl+alt+shift+z",
 				"when": "editorTextFocus"
 			}
 		],
