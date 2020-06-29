@@ -2,9 +2,18 @@
 
 ## 使用说明
 
-在项目src里建立一个@types文件夹
+1. 在项目package.json里写入配置
+```json
+{
+  "name": "开发配置package.json",
+  "version": "0.1.0",
+  "dev-config": {
+    "@types": "node_modules/@zhululu/zhaopin/dev/@types"
+  }
+}
+```
 
-然后建立一个json文件（例如：this.api.json）
+2. 在自定义目录中建立一个json文件（例如：this.api.json）
 
 this.api.json文件内容
 ```
