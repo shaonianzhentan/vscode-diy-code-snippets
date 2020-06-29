@@ -2,7 +2,7 @@
 
 ## 使用说明
 
-1. 在项目package.json里写入配置
+> 项目`package.json`里写入配置
 ```json
 {
   "name": "开发配置package.json",
@@ -13,9 +13,9 @@
 }
 ```
 
-2. 在自定义目录中建立一个json文件（例如：this.api.json）
+> 自定义目录中建立一个json文件（例如：`this.api.json`）
 
-this.api.json文件内容
+`this.api.json`文件内容
 ```
 [
   {
@@ -30,7 +30,7 @@ this.api.json文件内容
 ]
 ```
 
-this.api.json文件内容字段介绍
+`this.api.json`文件内容字段介绍
 ```
 [
   {
